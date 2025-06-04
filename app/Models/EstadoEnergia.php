@@ -12,4 +12,9 @@ class EstadoEnergia extends Model
     protected $table = 'estado_energia';
     protected $primaryKey = 'id_estado_energia';
     protected $fillable = ['estado_energia'];
+
+    public function dispositivos()
+    {
+        return $this->hasMany(Dispositivo::class, 'id_estado_energia', 'id_estado_energia');
+    }
 }
