@@ -76,6 +76,12 @@ Sigue estos pasos para configurar el proyecto localmente:
    - `fix/login-validation`
 
 3. Después de hacer cambios, crea un Pull Request a `main`
+   ```bash
+   # Sube tu rama al remoto (primera vez)
+    git push -u origin feature/nombre-de-tu-funcionalidad
+    # O en pushes posteriores:
+    git push
+   ```
 
 ## Problemas Comunes y Soluciones
 
