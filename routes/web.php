@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\LocalidadController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,5 +20,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipios.index');
+Route::resource('localidades', LocalidadController::class);
+
 
 require __DIR__.'/auth.php';

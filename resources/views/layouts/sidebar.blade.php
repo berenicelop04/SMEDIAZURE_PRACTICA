@@ -27,6 +27,12 @@
             <span class="ml-1 item-text">Municipios</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link pl-3" href="{{ route('localidades.index') }}">
+            <i class="fe fe-map fe-16"></i>
+            <span class="ml-1 item-text">Localidades</span>
+            </a>
+        </li>
     </ul>
   </nav>
 </aside>
