@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UserApiController;
 use App\Http\Controllers\UbicacionAntenaController;
 use App\Http\Controllers\Api\UbicacionAntenaApiController;
 use App\Http\Controllers\Api\MunicipioApiController;
@@ -15,6 +16,10 @@ Route::get('/ubicacion-antena', [UbicacionAntenaController::class, 'apiIndex']);
 // Requiere tokens /auth: Sanctum o Passport. Cambia el middleware según uses.
 // Desactivado la autenticación por el momento para que no cause conflictos.
 //Route::middleware('auth:sanctum')->group(function () {
+
+    Route::middleware('auth:sanctum')->get('/user', [UserApiController::class, 'show']);  // Para obtener el usuario logueado
+    Route::get('/usuarios',                         [UserApiController::class, 'index']);  // Para obtener todos los usuarios
+    Route::get('/usuarios/{id}',                    [UserApiController::class, 'show']);  // Para obtener un usuario específico
 
     // Reporte Principal (admin)
     Route::get   ('/reportes',               [ReportePrincipalApiController::class, 'index']);   // list + filtros
