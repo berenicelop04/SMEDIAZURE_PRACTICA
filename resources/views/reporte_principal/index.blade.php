@@ -17,8 +17,8 @@
   <div class="row justify-content-center">
     <div class="col-12">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h2 class="h5 page-title mb-0">Listado de Reportes (Nuevo módulo)</h2>
-        <a href="{{ route('reporte-principal.create') }}" class="btn btn-primary mb-2">+ Nuevo Reporte</a>
+        <h2 class="h5 page-title mb-0 mr-3">Listado de Reportes (Nuevo módulo)</h2>
+        <a href="{{ route('reporte-principal.create') }}" class="btn btn-primary mb-2">Nuevo Reporte</a>
       </div>
 
       @if(session('success'))

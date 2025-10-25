@@ -17,13 +17,17 @@
 @section('content')
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-9">
+    <div class="col-12 col-lg-10 col-xl-10">
 
       <div class="d-flex align-items-center justify-content-between mb-3">
         <h2 class="h5 mb-0">Nuevo Reporte (Administrador)</h2>
         <div>
           <a href="{{ route('reporte-principal.index') }}" class="btn btn-sm btn-outline-secondary">Volver</a>
         </div>
+      </div>
+      <div>
+          <a href="{{ route('reporte-principal.index') }}"><span class="text-muted">Reportes</span></a>
+          <a href="#"><span class="text-muted">/Nuevo Reporte</span></a>
       </div>
 
       @if($errors->any())

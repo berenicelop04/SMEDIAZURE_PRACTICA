@@ -2,7 +2,6 @@
 
 @push('styles')
 <style>
-  .navbar { justify-content: end; }
   .badge-status { font-size: .9rem; }
   .media-thumb { width: 120px; height: 90px; object-fit: cover; border-radius: .5rem; }
   .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: .75rem; }
@@ -21,12 +20,13 @@
 @endsection
 
 @section('sidebar')
+  @include('layouts.sidebar')
 @endsection
 
 @section('content')
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-9">
+    <div class="col-12 col-lg-10 col-xl-10">
 
       {{-- Encabezado --}}
       <div class="d-flex align-items-center justify-content-between mb-3">
@@ -41,6 +41,10 @@
           </span>
           <a href="{{ route('reporte-principal.index') }}" class="btn btn-sm btn-outline-secondary ml-2">Volver</a>
         </div>
+      </div>
+      <div>
+          <a href="{{ route('reporte-principal.index') }}"><span class="text-muted">Reportes</span></a>
+          <a href="#"><span class="text-muted">/Historial Reporte</span></a>
       </div>
 
       {{-- Mensajes --}}
