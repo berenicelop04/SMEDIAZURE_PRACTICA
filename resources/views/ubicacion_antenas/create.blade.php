@@ -1,11 +1,7 @@
 @extends('layouts.base')
 
 @push('styles')
-  <style>
-    .navbar {
-        justify-content: end;
-    }
-  </style>
+
 @endpush
 
 @section('navbar')
@@ -13,7 +9,7 @@
 @endsection
 
 @section('sidebar')
-
+  @include('layouts.sidebar')
 @endsection
 
 @section('content')
@@ -35,7 +31,11 @@
         <!-- Formulario -->
         <div class="card shadow mb-4">
             <div class="card-body">
-                <h3 class="mb-4">Registrar Nueva Antena</h2>
+                <h3 class="mb-0">Registrar Nueva Antena</h2>
+                <div class="mb-4">
+                    <a href="{{ route('ubicacion_antenas.index') }}"><span class="text-muted">Antenas</span></a>
+                    <a href="#"><span class="text-muted">/Nueva Antena</span></a>
+                </div>
 
                 <form action="{{ route('ubicacion_antenas.store') }}" method="POST">
                     @csrf
